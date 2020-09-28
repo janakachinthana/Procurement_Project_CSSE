@@ -1,8 +1,6 @@
 import {
   Component,
   OnInit,
-  Injector,
-  Renderer2
 } from '@angular/core';
 
 @Component({
