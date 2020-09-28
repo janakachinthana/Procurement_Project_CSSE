@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Injector,
+  Renderer2
+} from '@angular/core';
 
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css']
 })
-export class AccountComponent implements OnInit {
+export class AccountComponent  implements OnInit {
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

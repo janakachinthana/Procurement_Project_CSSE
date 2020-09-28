@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Injector, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,16 +9,22 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(
-    private router: Router,
-  ) { }
-
-  ngOnInit(): void {
-  }
 
 
-  login(){
-    this.router.navigateByUrl('main/dashboard');
-  }
+submitting = false;
+
+constructor(
+  injector: Injector,
+  private router: Router,
+) {
+ 
+}
+login(){
+  this.router.navigateByUrl('main/dashboard');
+}
+ngOnInit(): void {
 
 }
+
+}
+
