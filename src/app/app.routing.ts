@@ -13,7 +13,7 @@ const routes: Routes =[
     redirectTo: 'dashboard',
     pathMatch: 'full',
   }, {
-    path: 'main',
+    path: '',
     component: AdminLayoutComponent,
     children: [{
       path: '',

@@ -8,7 +8,6 @@ import { IconsComponent } from '../../icons/icons.component';
 import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
-import { JjjComponent } from 'app/jjj/jjj.component';
 import { AccountComponent } from 'app/account/account.component';
 import { LoginComponent } from 'app/Account/login/login.component';
 

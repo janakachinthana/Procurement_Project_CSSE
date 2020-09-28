@@ -22,7 +22,6 @@ import {
   AgmCoreModule
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { JjjComponent } from './jjj/jjj.component';
 import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './Account/login/login.component';
 
@@ -42,7 +41,6 @@ import { LoginComponent } from './Account/login/login.component';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    JjjComponent,
     AccountComponent,
     LoginComponent,
 
