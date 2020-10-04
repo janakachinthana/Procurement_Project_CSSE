@@ -3,7 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-
+import { AngularFireModule} from "@angular/fire";
+import { AngularFirestoreModule} from "@angular/fire/firestore";
+import { SelectDropDownModule } from 'ngx-select-dropdown'
+import {MatSelectModule} from '@angular/material/select';
 
 
 import { AppRoutingModule } from './app.routing';
@@ -32,30 +35,44 @@ import { AngularFireModule } from '@angular/fire'; // imported for firebase
 import { AngularFireDatabaseModule } from '@angular/fire/database'; // imported for firebase
 import { AngularFirestoreModule } from '@angular/fire/firestore'; // imported for firebase
 
+import { OrderNowFormComponent } from './typography/order-now-form/order-now-form.component';
+import { OrderNowItemslitsComponent } from './typography/order-now-itemslits/order-now-itemslits.component';
+import { OrderNowService } from './shared/order-now.service'; 
+// import { ToastrModule } from 'ngx-toastr';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+
+
 @NgModule({
   imports: [
     BrowserAnimationsModule,
+    // ToastrModule.forRoot(), // ToastrModule added
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
+    MatSelectModule,
+    MatSnackBarModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+    SelectDropDownModule,
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
     }),
     AngularFireModule.initializeApp(environment.firebaseConfig), // imported firebase config
-    AngularFireDatabaseModule,
-    AngularFirestoreModule
+    AngularFireDatabaseModule, // imported firebase config
+    AngularFirestoreModule // imported firebase config
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
     AccountComponent,
-    LoginComponent,
+    LoginComponent
 
   ],
-  providers: [],
+  providers: [OrderNowService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
