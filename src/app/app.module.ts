@@ -3,7 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-
+import { AngularFireModule} from "@angular/fire";
+import { AngularFirestoreModule} from "@angular/fire/firestore";
+import { SelectDropDownModule } from 'ngx-select-dropdown'
+import {MatSelectModule} from '@angular/material/select';
 
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
@@ -24,16 +27,30 @@ import {
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './Account/login/login.component';
+import { environment } from 'environments/environment';
+import { OrderNowFormComponent } from './typography/order-now-form/order-now-form.component';
+import { OrderNowItemslitsComponent } from './typography/order-now-itemslits/order-now-itemslits.component';
+import { OrderNowService } from './shared/order-now.service'; 
+// import { ToastrModule } from 'ngx-toastr';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+
 
 @NgModule({
   imports: [
     BrowserAnimationsModule,
+    // ToastrModule.forRoot(), // ToastrModule added
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
+    MatSelectModule,
+    MatSnackBarModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+    SelectDropDownModule,
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
     })
@@ -42,10 +59,10 @@ import { LoginComponent } from './Account/login/login.component';
     AppComponent,
     AdminLayoutComponent,
     AccountComponent,
-    LoginComponent,
+    LoginComponent
 
   ],
-  providers: [],
+  providers: [OrderNowService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
