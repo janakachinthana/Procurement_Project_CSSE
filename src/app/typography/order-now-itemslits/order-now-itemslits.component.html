@@ -1,0 +1,20 @@
+
+<h3>List of Items</h3>
+
+<table class="table table-hover">
+    <thead>
+        <th>Category</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Remark</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let neword of list">
+            <td (click)="onEdit(neword)">{{neword.categoryName}}</td>
+            <td (click)="onEdit(neword)">{{neword.productName}}</td>
+            <td (click)="onEdit(neword)">{{neword.quantity}}</td>
+            <td (click)="onEdit(neword)">{{neword.remark}}</td>
+            <td><a class="btn text-danger" (click)="onDelete(neword.id)"><i class="fa fa-trash"></i></a></td>
+        </tr>
+    </tbody>
+</table>
