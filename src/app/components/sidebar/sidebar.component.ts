@@ -1,3 +1,4 @@
+import { not } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 
 declare const $: any;
@@ -7,6 +8,8 @@ declare interface RouteInfo {
     icon: string;
     class: string;
 }
+
+
 export const ROUTES: RouteInfo[] = [
     // { path: '/dashboard', title: 'Dashboard',  icon: 'dashboard', class: '' },
     { path: '/main/user-profile', title: 'User Profile',  icon:'person', class: '' },
@@ -19,6 +22,12 @@ export const ROUTES: RouteInfo[] = [
     { path: '/main/dashboard', title: 'Dashbord',  icon:'Dashbord', class: 'Dashbord' },
 ];
 
+export const ROUTE: RouteInfo[] = [
+  // { path: '/dashboard', title: 'Dashboard',  icon: 'dashboard', class: '' },
+  { path: '/main/user-profile', title: 'User Profile',  icon:'person', class: '' },
+
+];
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -26,11 +35,18 @@ export const ROUTES: RouteInfo[] = [
 })
 export class SidebarComponent implements OnInit {
   menuItems: any[];
+  userB : any = 1;
 
   constructor() { }
 
   ngOnInit() {
-    this.menuItems = ROUTES.filter(menuItem => menuItem);
+    if (this.userB != 1) {
+      this.menuItems = ROUTES.filter(menuItem => menuItem);
+    } else {
+      this.menuItems = ROUTE.filter(menuItem => menuItem);
+      
+    }
+    
   }
   isMobileMenu() {
       if ($(window).width() > 991) {
