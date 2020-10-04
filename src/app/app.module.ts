@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 
+
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 
@@ -24,6 +25,12 @@ import {
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './Account/login/login.component';
+import { environment } from 'environments/environment';
+
+
+import { AngularFireModule } from '@angular/fire'; // imported for firebase
+import { AngularFireDatabaseModule } from '@angular/fire/database'; // imported for firebase
+import { AngularFirestoreModule } from '@angular/fire/firestore'; // imported for firebase
 
 @NgModule({
   imports: [
@@ -36,7 +43,10 @@ import { LoginComponent } from './Account/login/login.component';
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
-    })
+    }),
+    AngularFireModule.initializeApp(environment.firebaseConfig), // imported firebase config
+    AngularFireDatabaseModule,
+    AngularFirestoreModule
   ],
   declarations: [
     AppComponent,
