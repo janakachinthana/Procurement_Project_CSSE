@@ -19,6 +19,11 @@ export const ROUTES: RouteInfo[] = [
     { path: '/main/dashboard', title: 'Dashbord',  icon:'Dashbord', class: 'Dashbord' },
 ];
 
+export const ROUTES1: RouteInfo[] = [
+
+  { path: '/main/dashboard', title: 'Dashbord',  icon:'Dashbord', class: 'Dashbord' },
+];
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -26,11 +31,23 @@ export const ROUTES: RouteInfo[] = [
 })
 export class SidebarComponent implements OnInit {
   menuItems: any[];
+  type: any = 1;
 
   constructor() { }
 
   ngOnInit() {
-    this.menuItems = ROUTES.filter(menuItem => menuItem);
+
+    if (this.type == 1) {
+      
+      this.menuItems = ROUTES.filter(menuItem => menuItem);
+
+    } else {
+
+      this.menuItems = ROUTES1.filter(menuItem => menuItem);
+
+    }
+    
+    
   }
   isMobileMenu() {
       if ($(window).width() > 991) {
