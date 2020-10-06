@@ -8,7 +8,6 @@ import { AngularFirestoreModule} from "@angular/fire/firestore";
 import { SelectDropDownModule } from 'ngx-select-dropdown'
 import {MatSelectModule} from '@angular/material/select';
 
-
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 
@@ -29,12 +28,6 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './Account/login/login.component';
 import { environment } from 'environments/environment';
-
-
-import { AngularFireModule } from '@angular/fire'; // imported for firebase
-import { AngularFireDatabaseModule } from '@angular/fire/database'; // imported for firebase
-import { AngularFirestoreModule } from '@angular/fire/firestore'; // imported for firebase
-
 import { OrderNowFormComponent } from './typography/order-now-form/order-now-form.component';
 import { OrderNowItemslitsComponent } from './typography/order-now-itemslits/order-now-itemslits.component';
 import { OrderNowService } from './shared/order-now.service'; 
@@ -60,10 +53,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     SelectDropDownModule,
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
-    }),
-    AngularFireModule.initializeApp(environment.firebaseConfig), // imported firebase config
-    AngularFireDatabaseModule, // imported firebase config
-    AngularFirestoreModule // imported firebase config
+    })
   ],
   declarations: [
     AppComponent,
