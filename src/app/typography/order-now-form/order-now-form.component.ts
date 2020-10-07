@@ -35,7 +35,8 @@ export class OrderNowFormComponent implements OnInit {
     let data =Object.assign({},form.value);
     delete data.id;
     if(form.value.id == ''){
-      this.fireStore.collection('new-order').add(data);    
+      // this.fireStore.collection('new-order').add(data); 
+      this.fireStore.collection('Orders').doc('new-orders').collection('xxx').add(data);   
       this.openSnackBar();
       this.resetForm(form);
     }

@@ -10,6 +10,7 @@ import {MatSelectModule} from '@angular/material/select';
 
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
+import {MatDialogModule} from "@angular/material/dialog";
 
 import { AppComponent } from './app.component';
 
@@ -41,6 +42,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     BrowserAnimationsModule,
     // ToastrModule.forRoot(), // ToastrModule added
     FormsModule,
+    MatDialogModule,
     ReactiveFormsModule,
     HttpModule,
     ComponentsModule,

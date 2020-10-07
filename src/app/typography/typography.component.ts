@@ -28,7 +28,7 @@ export class TypographyComponent implements OnInit {
 
   addToPending(){
       this.list.forEach(item => {
-        this.fireStore.collection('pending-order'+item.id).add(item);    
+        this.fireStore.collection('Orders').doc('pending-orders').collection(''+item.id).add(item);    
         this.fireStore.doc('new-order/'+item.id).delete();
       });
   }
