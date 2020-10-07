@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { AngularFireModule} from "@angular/fire";
-import { AngularFirestoreModule} from "@angular/fire/firestore";
-import { SelectDropDownModule } from 'ngx-select-dropdown'
+import { AngularFireModule} from '@angular/fire';
+import { AngularFirestoreModule} from '@angular/fire/firestore';
+import { SelectDropDownModule } from 'ngx-select-dropdown' // run this command if not installed: npm install ngx-select-dropdown
 import {MatSelectModule} from '@angular/material/select';
 
 
@@ -30,23 +30,21 @@ import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './Account/login/login.component';
 import { environment } from 'environments/environment';
 
-
-import { AngularFireModule } from '@angular/fire'; // imported for firebase
-import { AngularFireDatabaseModule } from '@angular/fire/database'; // imported for firebase
-import { AngularFirestoreModule } from '@angular/fire/firestore'; // imported for firebase
-
 import { OrderNowFormComponent } from './typography/order-now-form/order-now-form.component';
 import { OrderNowItemslitsComponent } from './typography/order-now-itemslits/order-now-itemslits.component';
-import { OrderNowService } from './shared/order-now.service'; 
-// import { ToastrModule } from 'ngx-toastr';
+import { OrderNowService } from './shared/order-now.service';
+import { ToastrModule } from 'ngx-toastr';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+import { AngularFireDatabaseModule } from '@angular/fire/database'; // imported for firebase //added by Dhanusha
+
 
 
 
 @NgModule({
   imports: [
     BrowserAnimationsModule,
-    // ToastrModule.forRoot(), // ToastrModule added
+    ToastrModule.forRoot(), // ToastrModule added
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
@@ -57,13 +55,11 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatSnackBarModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    AngularFireDatabaseModule, // added by Dhanusha
     SelectDropDownModule,
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
-    }),
-    AngularFireModule.initializeApp(environment.firebaseConfig), // imported firebase config
-    AngularFireDatabaseModule, // imported firebase config
-    AngularFirestoreModule // imported firebase config
+    })
   ],
   declarations: [
     AppComponent,
