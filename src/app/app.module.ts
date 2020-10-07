@@ -8,7 +8,6 @@ import { AngularFirestoreModule} from '@angular/fire/firestore';
 import { SelectDropDownModule } from 'ngx-select-dropdown' // run this command if not installed: npm install ngx-select-dropdown
 import {MatSelectModule} from '@angular/material/select';
 
-
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 
@@ -29,7 +28,6 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './Account/login/login.component';
 import { environment } from 'environments/environment';
-
 import { OrderNowFormComponent } from './typography/order-now-form/order-now-form.component';
 import { OrderNowItemslitsComponent } from './typography/order-now-itemslits/order-now-itemslits.component';
 import { OrderNowService } from './shared/order-now.service';
