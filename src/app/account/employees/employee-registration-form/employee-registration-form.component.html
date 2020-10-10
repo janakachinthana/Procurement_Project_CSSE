@@ -1,0 +1,78 @@
+
+  
+  <br>
+  
+  <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+    <input type="hidden" name="EmployeeID" #EmployeeID="ngModel" [(ngModel)]="service.formData.EmployeeID">
+   
+       
+   
+    <div class="row">
+      <div class="col-md-6">
+        <label> First Name</label>
+          <input matInput required pattern="^[A-Z][a-z]+$"  name="FirstName"  #FirstName="ngModel" [(ngModel)]="service.formData.FirstName" class="form-control" >
+      </div >
+      <div class="col-md-6">
+        <label> Last Name</label>
+          <input matInput required pattern="^[A-Z]+[a-z]+$"  name="LastName"  #LastName="ngModel" [(ngModel)]="service.formData.LastName" class="form-control" >
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="col-md-6">
+        <label>Project</label>
+        <input matInput required name="projectName"  #ProjectName="ngModel" [(ngModel)]="service.formData.ProjectName" class="form-control" >
+    </div>
+    <div class="col-md-6">
+        <label>Site Address </label>
+        <input matInput required type="text"  name="Site Address"  #SiteAddress="ngModel" [(ngModel)]="service.formData.SiteAddress" class="form-control">
+    </div>
+    </div>
+      <div class="row">
+        <div class="col-md-6">
+            <label>NIC NO </label>
+            <input matInput required name="NicNo" #Nic="ngModel" [(ngModel)]="service.formData.Nic" class="form-control">
+        </div> 
+
+        <div class="col-md-6">
+            <label>Contact NO </label>
+            <input matInput required pattern="^[0-9]{9}" type="number" name="Contact"  #Contact="ngModel" [(ngModel)]="service.formData.Contact" class="form-control">
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <label>Email NO </label>
+          <input matInput required pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.com+$"  name="Email" type="email"  #Email="ngModel" [(ngModel)]="service.formData.Email" class="form-control">
+      </div>
+      <div class="col-md-6">
+        <label>Password </label>
+          <input matInput required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  name="Password" type="password" #Password="ngModel" [(ngModel)]="service.formData.Password" class="form-control">
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-6">
+        <div class="input-group-prepend">
+            <button type="submit" [disabled]="form.invalid" class="card-link btn btn-sm btn-outline-info ybtn" style="margin-left: 30px;"> send</button>
+      </div>  
+      </div>
+      <div class="col-md-6">
+        <div class="input-group-prepend">
+         
+          <button type="button"  [disabled]="form.invalid" class="card-link btn btn-sm btn-outline-info ybtn" style="margin-left: 30px;"> save</button>
+        </div>
+      </div>
+    </div>
+    <hr>
+      
+      <div class="col-md-12">
+        <div class="input-group-prepend">
+          <button type="button" class="card-link btn btn-sm btn-outline-danger ybtn" [mat-dialog-close]>CLOSE</button>
+         
+        </div>
+      </div>
+      
+  
+  </form>
+  
+  

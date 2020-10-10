@@ -22,6 +22,7 @@ export const ROUTES: RouteInfo[] = [
 export const ROUTES1: RouteInfo[] = [
 
   { path: '/main/dashboard', title: 'Dashbord',  icon:'Dashbord', class: 'Dashbord' },
+  { path: '/main/employees', title: 'Employee Management',  icon:'person', class: '' },
 ];
 
 @Component({
@@ -31,7 +32,7 @@ export const ROUTES1: RouteInfo[] = [
 })
 export class SidebarComponent implements OnInit {
   menuItems: any[];
-  type: any = 1;
+  type: any = 0;
 
   constructor() { }
 

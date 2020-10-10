@@ -19,12 +19,14 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { OrderNowFormComponent } from '../../typography/order-now-form/order-now-form.component';
 import { OrderNowItemslitsComponent } from '../../typography/order-now-itemslits/order-now-itemslits.component';
+// import { ToastrModule } from 'ngx-toastr/toastr/toastr.module';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
     RouterModule.forChild(account),
+    // ToastrModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
