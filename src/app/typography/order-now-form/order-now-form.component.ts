@@ -10,12 +10,16 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class OrderNowFormComponent implements OnInit {
 
+  todayDate : Date = new Date();
+
   constructor(private service: OrderNowService,
     private fireStore : AngularFirestore,
     private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.resetForm();
+
+   
   }
 
 
@@ -31,12 +35,15 @@ export class OrderNowFormComponent implements OnInit {
     }
   }
 
+
+
+
   onSubmit(form:NgForm){
     let data =Object.assign({},form.value);
     delete data.id;
     if(form.value.id == ''){
-      // this.fireStore.collection('new-order').add(data); 
-      this.fireStore.collection('Orders').doc('new-orders').collection('xxx').add(data);   
+      this.fireStore.collection('new-orders').doc(this.todayDate.toString()).set(data);  
+      // this.fireStore.collection('Orders').doc('new-orders').collection('xxx').add(data);   
       this.openSnackBar();
       this.resetForm(form);
     }
