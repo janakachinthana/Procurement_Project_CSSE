@@ -11,7 +11,8 @@ export class EmployeeService {
   formData: Employee;
   constructor(private fireStore : AngularFirestore) { }
 
-  getNewOrder(){
-    return this.fireStore.collection('new-order').snapshotChanges();
+  getEmployees(){
+    return this.fireStore.collection('Employees').snapshotChanges();
   }
+  
 }

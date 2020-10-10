@@ -1,7 +1,7 @@
 export class Employee {
     EmployeeID: number;
-    FirstName: string;
-    LastName: string;
+    FullName: string;
+    Designation: string;
     ProjectName: string;
     SiteAddress: String;
     Nic: string;

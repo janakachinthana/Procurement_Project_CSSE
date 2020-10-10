@@ -38,7 +38,7 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
 
-    if (this.type == 0) {
+    if (this.type == 1) {
       
       this.menuItems = ROUTES.filter(menuItem => menuItem);
 

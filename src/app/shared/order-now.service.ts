@@ -10,6 +10,6 @@ export class OrderNowService {
   constructor(private fireStore : AngularFirestore) { }
 
   getNewOrder(){
-    return this.fireStore.collection('new-order').snapshotChanges();
+    return this.fireStore.collection('new-orders').snapshotChanges();
   }
 }

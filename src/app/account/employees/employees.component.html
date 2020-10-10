@@ -16,8 +16,8 @@
                                             <h4 class="card-title">Port City Project</h4>
                                         </div>
                                         <div class="col-md-4">
-                                            <button class="card-link btn btn-sm btn-outline-danger ybtn" (click)="AddOrEditEmployees(null)"
-                                                mat-raised-button>
+                                            <button class="card-link btn btn-sm btn-outline-danger ybtn"
+                                                (click)="AddOrEditEmployees(null)" mat-raised-button>
                                                 <i class="material-icons">add_to_photos</i> Add an employee
                                             </button>
                                         </div>
@@ -33,37 +33,61 @@
                                             ID
                                         </th>
                                         <th>
-                                            Name
+                                            Dull Name
                                         </th>
                                         <th>
-                                            Country
+                                            Designation
                                         </th>
                                         <th>
-                                            City
+                                            Project
                                         </th>
                                         <th>
-                                            Salary
+                                            Site Address
+                                        </th>
+                                        <th>
+                                            Nic
+                                        </th>
+                                        <th>
+                                            Contact
+                                        </th>
+                                        <th>
+                                            Email
+                                        </th>
+                                        <th>
+                                            Password
                                         </th>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        <tr *ngFor="let emp of service.list">
                                             <td>
-                                                1
+                                                {{emp.EmployeeID}}
                                             </td>
                                             <td>
-                                                Dakota Rice
+                                                {{emp.FullName}}
                                             </td>
                                             <td>
-                                                Niger
+                                                {{emp.Designation}}
                                             </td>
                                             <td>
-                                                Oud-Turnhout
+                                                {{emp.ProjectName}}
                                             </td>
                                             <td class="text-primary">
-                                                $36,738
+                                                {{emp.SiteAddress}}
+                                            </td>
+                                            <td class="text-primary">
+                                                {{emp.Nic}}
+                                            </td>
+                                            <td class="text-primary">
+                                                {{emp.Contact}}
+                                            </td>
+                                            <td class="text-primary">
+                                                {{emp.Email}}
+                                            </td>
+                                            <td class="text-primary">
+                                                {{emp.Password}}
                                             </td>
                                         </tr>
-                                       
+
                                     </tbody>
                                 </table>
                             </div>

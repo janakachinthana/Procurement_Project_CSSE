@@ -29,8 +29,8 @@ export class EmployeeRegistrationFormComponent implements OnInit {
       form.resetForm();
     this.service.formData = {
       EmployeeID : null,
-      FirstName : '',
-      LastName : '',
+      FullName : '',
+      Designation : '',
       ProjectName : '',
       SiteAddress : '',
       Nic : '',

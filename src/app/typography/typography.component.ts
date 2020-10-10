@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from "@angular/fire/firestore";
 import { NewOrder } from 'app/shared/new-order.model';
 import { OrderNowService } from 'app/shared/order-now.service';
+import { data } from 'jquery';
 
 @Component({
   selector: 'app-typography',
@@ -9,7 +10,7 @@ import { OrderNowService } from 'app/shared/order-now.service';
   styleUrls: ['./typography.component.css']
 })
 export class TypographyComponent implements OnInit {
-
+  todayDate : Date = new Date();
   list : NewOrder[];
 
 
@@ -28,8 +29,9 @@ export class TypographyComponent implements OnInit {
 
   addToPending(){
       this.list.forEach(item => {
-        this.fireStore.collection('Orders').doc('pending-orders').collection(''+item.id).add(item);    
-        this.fireStore.doc('new-order/'+item.id).delete();
+        this.fireStore.collection('orders').doc('Pending-Orders').collection(this.todayDate.toString()).doc(item.id.toString()).set(item);
+        // this.fireStore.collection('pending-orders').doc('pending-orders').collection(''+item.id).add(item);    
+        this.fireStore.collection('new-orders').doc(item.id.toString()).delete();
       });
   }
 }
