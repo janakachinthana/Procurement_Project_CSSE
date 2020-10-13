@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Employee } from 'app/shared/models/employee.model';
-import { EmployeeService } from 'app/shared/servises/employee.service';
+import { EmployeeService } from 'app/shared/services/employee.service';
 import { ToastrService } from 'ngx-toastr/toastr/toastr.service';
 
 @Component({

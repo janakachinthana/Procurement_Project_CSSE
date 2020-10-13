@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GenaralService } from 'app/shared/services/genaral.service';
 
 declare const $: any;
 declare interface RouteInfo {
@@ -22,6 +23,12 @@ export const ROUTES: RouteInfo[] = [
 export const ROUTES1: RouteInfo[] = [
 
   { path: '/main/dashboard', title: 'Dashbord',  icon:'Dashbord', class: 'Dashbord' },
+  { path: '/main/employees', title: 'Project Manager',  icon:'person', class: '' },
+];
+
+export const ROUTES2: RouteInfo[] = [
+
+  { path: '/main/dashboard', title: 'Dashbord',  icon:'Dashbord', class: 'Dashbord' },
   { path: '/main/employees', title: 'Employee Management',  icon:'person', class: '' },
 ];
 
@@ -34,17 +41,23 @@ export class SidebarComponent implements OnInit {
   menuItems: any[];
   type: any = 0;
 
-  constructor() { }
+  constructor(
+    private serviceGenaral: GenaralService
+  ) { }
 
   ngOnInit() {
 
-    if (this.type == 1) {
+    if (this.serviceGenaral.type == 0) {
       
       this.menuItems = ROUTES.filter(menuItem => menuItem);
 
-    } else {
+    }else if (this.serviceGenaral.type == 1) {
 
       this.menuItems = ROUTES1.filter(menuItem => menuItem);
+
+    } else if (this.serviceGenaral.type == 2) {
+
+      this.menuItems = ROUTES2.filter(menuItem => menuItem);
 
     }
     

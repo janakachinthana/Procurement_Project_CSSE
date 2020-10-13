@@ -10,7 +10,7 @@ import { NotificationsComponent } from '../../notifications/notifications.compon
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { AccountComponent } from 'app/account/account.component';
 import { LoginComponent } from 'app/Account/login/login.component';
-import { EmployeesComponent } from 'app/account/employees/employees.component';
+import { EmployeesComponent } from '../../procurement/employees/employees.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },

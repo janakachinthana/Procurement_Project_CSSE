@@ -34,8 +34,8 @@ import { OrderNowItemslitsComponent } from './typography/order-now-itemslits/ord
 import { OrderNowService } from './shared/order-now.service'; 
 // import { ToastrModule } from 'ngx-toastr';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { EmployeesComponent } from './account/employees/employees.component';
-import { EmployeeRegistrationFormComponent } from './account/employees/employee-registration-form/employee-registration-form.component';
+import { EmployeeRegistrationFormComponent } from './procurement/employees/employee-registration-form/employee-registration-form.component';
+import { EmployeesComponent } from './procurement/employees/employees.component';
 // import { ToastrModule } from 'ngx-toastr/toastr/toastr.module';
 
 
@@ -67,7 +67,8 @@ import { EmployeeRegistrationFormComponent } from './account/employees/employee-
     AccountComponent,
     LoginComponent,
     EmployeesComponent,
-    EmployeeRegistrationFormComponent
+    EmployeeRegistrationFormComponent,
+
 
   ],
   providers: [OrderNowService],
