@@ -28,8 +28,8 @@ import { OrderNowService } from './common-component/shared/order-now.service';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { EmployeeRegistrationFormComponent } from './procurement/employees/employee-registration-form/employee-registration-form.component';
 import { EmployeesComponent } from './procurement/employees/employees.component';
-import { ProjectManagersComponent } from './project-managers/project-managers.component';
 import { SupervisorsComponent } from './supervisors/supervisors.component';
+import { RequestedOrderListComponent } from './project-managers/requested-order-list/requested-order-list.component';
 
 
 
@@ -62,8 +62,8 @@ import { SupervisorsComponent } from './supervisors/supervisors.component';
     LoginComponent,
     EmployeesComponent,
     EmployeeRegistrationFormComponent,
-    ProjectManagersComponent,
     SupervisorsComponent,
+    RequestedOrderListComponent,
    
 
 

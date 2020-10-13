@@ -11,6 +11,7 @@ import { UpgradeComponent } from '../../supervisors/upgrade/upgrade.component';
 import { AccountComponent } from 'app/account/account.component';
 import { LoginComponent } from 'app/Account/login/login.component';
 import { EmployeesComponent } from '../../procurement/employees/employees.component';
+import { RequestedOrderListComponent } from '../../project-managers/requested-order-list/requested-order-list.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -22,6 +23,8 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'employees',        component: EmployeesComponent },
+    { path: 'requestedOrderList',        component: RequestedOrderListComponent },
+
 ];
 
 export const account: Routes = [
