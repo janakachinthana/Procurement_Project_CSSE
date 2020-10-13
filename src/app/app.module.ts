@@ -14,14 +14,7 @@ import {MatDialogModule} from "@angular/material/dialog";
 
 import { AppComponent } from './app.component';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
-import { TableListComponent } from './table-list/table-list.component';
-import { TypographyComponent } from './typography/typography.component';
-import { IconsComponent } from './icons/icons.component';
-import { MapsComponent } from './maps/maps.component';
-import { NotificationsComponent } from './notifications/notifications.component';
-import { UpgradeComponent } from './upgrade/upgrade.component';
+
 import {
   AgmCoreModule
 } from '@agm/core';
@@ -29,13 +22,15 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './Account/login/login.component';
 import { environment } from 'environments/environment';
-import { OrderNowFormComponent } from './typography/order-now-form/order-now-form.component';
-import { OrderNowItemslitsComponent } from './typography/order-now-itemslits/order-now-itemslits.component';
+import { OrderNowFormComponent } from './supervisors/typography/order-now-form/order-now-form.component';
+import { OrderNowItemslitsComponent } from './supervisors/typography/order-now-itemslits/order-now-itemslits.component';
 import { OrderNowService } from './shared/order-now.service'; 
 // import { ToastrModule } from 'ngx-toastr';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { EmployeeRegistrationFormComponent } from './procurement/employees/employee-registration-form/employee-registration-form.component';
 import { EmployeesComponent } from './procurement/employees/employees.component';
+import { ProjectManagersComponent } from './project-managers/project-managers.component';
+import { SupervisorsComponent } from './supervisors/supervisors.component';
 // import { ToastrModule } from 'ngx-toastr/toastr/toastr.module';
 
 
@@ -68,6 +63,8 @@ import { EmployeesComponent } from './procurement/employees/employees.component'
     LoginComponent,
     EmployeesComponent,
     EmployeeRegistrationFormComponent,
+    ProjectManagersComponent,
+    SupervisorsComponent,
 
 
   ],
