@@ -58,7 +58,7 @@
                                         </th>
                                     </thead>
                                     <tbody>
-                                        <tr *ngFor="let emp of service.list">
+                                        <tr *ngFor="let emp of list">
                                             <td>
                                                 {{emp.EmployeeID}}
                                             </td>
@@ -69,21 +69,21 @@
                                                 {{emp.Designation}}
                                             </td>
                                             <td>
-                                                {{emp.ProjectName}}
+                                                {{emp.projectName}}
                                             </td>
-                                            <td class="text-primary">
+                                            <td>
                                                 {{emp.SiteAddress}}
                                             </td>
-                                            <td class="text-primary">
+                                            <td>
                                                 {{emp.Nic}}
                                             </td>
-                                            <td class="text-primary">
+                                            <td>
                                                 {{emp.Contact}}
                                             </td>
-                                            <td class="text-primary">
+                                            <td>
                                                 {{emp.Email}}
                                             </td>
-                                            <td class="text-primary">
+                                            <td>
                                                 {{emp.Password}}
                                             </td>
                                         </tr>
@@ -97,3 +97,4 @@
             </div>
         </div>
     </div>
+    

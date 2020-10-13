@@ -13,6 +13,7 @@ export class EmployeeService {
 
   getEmployees(){
     return this.fireStore.collection('Employees').snapshotChanges();
+    // return this.fireStore.collection('new-orders').snapshotChanges();
   }
   
 }

@@ -25,13 +25,13 @@
     </div>
     <div class="col-md-6">
         <label>Site Address </label>
-        <input matInput required type="text"  name="Site Address"  #SiteAddress="ngModel" [(ngModel)]="service.formData.SiteAddress" class="form-control">
+        <input matInput required type="text"  name="SiteAddress"  #SiteAddress="ngModel" [(ngModel)]="service.formData.SiteAddress" class="form-control">
     </div>
     </div>
       <div class="row">
         <div class="col-md-6">
             <label>NIC NO </label>
-            <input matInput required name="NicNo" #Nic="ngModel" [(ngModel)]="service.formData.Nic" class="form-control">
+            <input matInput required name="Nic" #Nic="ngModel" [(ngModel)]="service.formData.Nic" class="form-control">
         </div> 
 
         <div class="col-md-6">
@@ -53,7 +53,7 @@
     <div class="row">
       <div class="col-md-6">
         <div class="input-group-prepend">
-            <button type="submit" [disabled]="form.invalid" class="card-link btn btn-sm btn-outline-info ybtn" style="margin-left: 30px;"> send</button>
+            <button type="submit" [disabled]="form.invalid" class="card-link btn btn-sm btn-outline-info ybtn" style="margin-left: 30px;" [mat-dialog-close]> send</button>
       </div>  
       </div>
       <div class="col-md-6">

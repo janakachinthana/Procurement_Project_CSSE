@@ -31,7 +31,7 @@ export class EmployeeRegistrationFormComponent implements OnInit {
       EmployeeID : null,
       FullName : '',
       Designation : '',
-      ProjectName : '',
+      projectName : '',
       SiteAddress : '',
       Nic : '',
       Contact : null,

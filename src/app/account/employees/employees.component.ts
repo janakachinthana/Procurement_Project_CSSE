@@ -3,6 +3,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Employee } from 'app/shared/models/employee.model';
+import { NewOrder } from 'app/shared/new-order.model';
+import { OrderNowService } from 'app/shared/order-now.service';
 import { EmployeeService } from 'app/shared/servises/employee.service';
 import { EmployeeRegistrationFormComponent } from './employee-registration-form/employee-registration-form.component';
 // import { EmployeeService } from 'app/shared/servises/employee.service';
@@ -15,7 +17,7 @@ import { EmployeeRegistrationFormComponent } from './employee-registration-form/
 export class EmployeesComponent implements OnInit {
 
   list : Employee[];
-
+  
   constructor(
     private dialog:MatDialog,
     private service : EmployeeService,
@@ -24,19 +26,14 @@ export class EmployeesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // this.service.getEmployees().subscribe(actionArray=>{
-    //   this.list = actionArray.map(item => {
-    //     return {   
-    //       id: item.payload.doc.id, ...item.payload.doc.data() as Employee}
-    //   })
-    // });
-
-    this.service.getEmployees().subscribe(data => {
-      this.list = data.map(e => {
+   
+    this.service.getEmployees().subscribe(actionArray => {
+      this.list = actionArray.map(e => {
         return {
           id: e.payload.doc.id, ...e.payload.doc.data() as Employee};
       })
     });
+
   }
   
   AddOrEditEmployees(emp: Employee) {

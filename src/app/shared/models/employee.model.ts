@@ -2,10 +2,10 @@ export class Employee {
     EmployeeID: number;
     FullName: string;
     Designation: string;
-    ProjectName: string;
+    projectName: string;
     SiteAddress: String;
     Nic: string;
-    Contact: number;
+    Contact: string;
     Email: string;
     Password: string;
     
