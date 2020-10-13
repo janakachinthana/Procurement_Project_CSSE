@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Employee } from 'app/shared/models/employee.model';
-import { NewOrder } from 'app/shared/new-order.model';
-import { OrderNowService } from 'app/shared/order-now.service';
-import { EmployeeService } from 'app/shared/services/employee.service';
+import { Employee } from 'app/common-component/shared/models/employee.model';
+import { NewOrder } from 'app/common-component/shared/new-order.model';
+import { OrderNowService } from 'app/common-component/shared/order-now.service';
+import { EmployeeService } from 'app/common-component/shared/services/employee.service';
 import { EmployeeRegistrationFormComponent } from './employee-registration-form/employee-registration-form.component';
 // import { EmployeeService } from 'app/shared/servises/employee.service';
 

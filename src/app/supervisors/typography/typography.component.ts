@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from "@angular/fire/firestore";
-import { NewOrder } from 'app/shared/new-order.model';
-import { OrderNowService } from 'app/shared/order-now.service';
+import { NewOrder } from 'app/common-component/shared/new-order.model';
+import { OrderNowService } from 'app/common-component/shared/order-now.service';
 import { data } from 'jquery';
 
 @Component({

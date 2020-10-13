@@ -18,7 +18,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { OrderNowFormComponent } from '../../supervisors/typography/order-now-form/order-now-form.component';
 import { OrderNowItemslitsComponent } from '../../supervisors/typography/order-now-itemslits/order-now-itemslits.component';
 import { DashboardComponent } from '../../supervisors/dashboard/dashboard.component';
-import { UserProfileComponent } from '../../user-profile/user-profile.component';
+import { UserProfileComponent } from '../../common-component/user-profile/user-profile.component';
 // import { ToastrModule } from 'ngx-toastr/toastr/toastr.module';
 
 @NgModule({

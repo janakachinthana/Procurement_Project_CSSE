@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GenaralService } from 'app/shared/services/genaral.service';
+import { GenaralService } from 'app/common-component/shared/services/genaral.service';
+
 
 declare const $: any;
 declare interface RouteInfo {

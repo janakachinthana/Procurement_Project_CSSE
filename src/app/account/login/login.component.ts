@@ -2,9 +2,9 @@ import { Injector, OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Employee } from 'app/shared/models/employee.model';
-import { EmployeeService } from 'app/shared/services/employee.service';
-import { GenaralService } from 'app/shared/services/genaral.service';
+import { Employee } from 'app/common-component/shared/models/employee.model';
+import { EmployeeService } from 'app/common-component/shared/services/employee.service';
+import { GenaralService } from 'app/common-component/shared/services/genaral.service';
 
 @Component({
   selector: 'app-login',
