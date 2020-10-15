@@ -25,12 +25,16 @@ export const ROUTES1: RouteInfo[] = [
 
   { path: '/main/dashboard', title: 'Dashbord',  icon:'Dashbord', class: 'Dashbord' },
   { path: '/main/requestedOrderList', title: 'Requested Orders',  icon:'order', class: '' },
+  { path: '/main/catalogues', title: 'Catalogue Management',  icon:'person', class: '' },
+
 ];
 
 export const ROUTES2: RouteInfo[] = [
 
   { path: '/main/dashboard', title: 'Dashbord',  icon:'Dashbord', class: 'Dashbord' },
-  { path: '/main/employees', title: 'Employee Management',  icon:'person', class: '' },
+  { path: '/main/employees', title: 'Employee Management',  icon:'person', class: '' }, 
+   { path: '/main/catalogues', title: 'Catalogue Management',  icon:'person', class: '' },
+
 ];
 
 @Component({

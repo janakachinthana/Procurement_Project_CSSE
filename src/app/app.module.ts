@@ -30,8 +30,10 @@ import { EmployeeRegistrationFormComponent } from './procurement/employees/emplo
 import { EmployeesComponent } from './procurement/employees/employees.component';
 import { SupervisorsComponent } from './supervisors/supervisors.component';
 import { RequestedOrderListComponent } from './project-managers/requested-order-list/requested-order-list.component';
+import { CataloguesComponent } from './procurement/employees/catalogues/catalogues.component';
 
-
+import 'zone.js/dist/zone';
+import { CataloguesInsertionFormComponent } from './procurement/employees/catalogues/catalogues-insertion-form/catalogues-insertion-form.component'; 
 
 
 
@@ -64,6 +66,8 @@ import { RequestedOrderListComponent } from './project-managers/requested-order-
     EmployeeRegistrationFormComponent,
     SupervisorsComponent,
     RequestedOrderListComponent,
+    CataloguesComponent,
+    CataloguesInsertionFormComponent,
    
 
 
