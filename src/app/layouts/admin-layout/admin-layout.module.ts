@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AdminLayoutRoutes, account} from './admin-layout.routing';
+import { AdminLayoutRoutes} from './admin-layout.routing';
 import { TypographyComponent } from '../../supervisors/typography/typography.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
@@ -20,7 +20,7 @@ import { OrderNowItemslitsComponent } from '../../supervisors/typography/order-n
   imports: [
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
-    RouterModule.forChild(account),
+    // RouterModule.forChild(account),
     // ToastrModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,

@@ -32,6 +32,7 @@ import { OrdersComponent } from './procurement/orders/orders.component';
 import 'zone.js/dist/zone';
 import { CataloguesInsertionFormComponent } from './procurement/catalogues/catalogues-insertion-form/catalogues-insertion-form.component';
 import { CataloguesComponent } from './procurement/catalogues/catalogues.component';
+import { OrderHistoryComponent } from './project-managers/Orders/order-history/order-history.component';
 
 @NgModule({
   imports: [
@@ -63,6 +64,7 @@ import { CataloguesComponent } from './procurement/catalogues/catalogues.compone
     OrdersComponent,
     CataloguesComponent,
     CataloguesInsertionFormComponent,
+    OrderHistoryComponent,
    
 
 

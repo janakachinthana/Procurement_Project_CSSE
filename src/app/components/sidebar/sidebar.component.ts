@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { GenaralService } from 'app/common-component/shared/services/genaral.service';
 
 
@@ -20,6 +21,7 @@ export const ROUTES1: RouteInfo[] = [
   { path: '/main/dashboard', title: 'Dashbord', icon: 'Dashbord', class: 'Dashbord' },
   { path: '/main/order', title: 'Request Order', icon: 'person', class: '' },
   { path: '/main/user-profile', title: 'User Profile', icon: 'person', class: '' },
+  { path: '/main/ordersProjectManager', title: 'Order History', icon: 'person', class: '' }
 ];
 
 export const ROUTES2: RouteInfo[] = [
@@ -43,7 +45,8 @@ export class SidebarComponent implements OnInit {
   type: any = 0;
 
   constructor(
-    private serviceGenaral: GenaralService
+    private serviceGenaral: GenaralService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -60,6 +63,8 @@ export class SidebarComponent implements OnInit {
 
       this.menuItems = ROUTES2.filter(menuItem => menuItem);
 
+    }else{
+      this.router.navigateByUrl('/');
     }
 
 

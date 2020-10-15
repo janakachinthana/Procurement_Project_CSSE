@@ -8,11 +8,18 @@ import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './Account/login/login.component';
 
 const routes: Routes =[
+
   {
     path: '',
-    redirectTo: 'dashboard',
     pathMatch: 'full',
-  }, {
+    component: LoginComponent,
+    children: [{
+      path: '',
+      loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
+      // loadChildren: './account/account.component'
+    }]
+  },
+   {
     path: 'main',
     component: AdminLayoutComponent,
     children: [{
@@ -20,16 +27,8 @@ const routes: Routes =[
       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
       // loadChildren: './account/account.component'
     }]
-  },
-  {
-    path: '',
-    component: LoginComponent,
-    children: [{
-      path: '',
-      loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
-      // loadChildren: './account/account.component'
-    }]
   }
+
 
   
 ];
