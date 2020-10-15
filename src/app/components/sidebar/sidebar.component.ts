@@ -18,16 +18,28 @@ export const ROUTES: RouteInfo[] = [
 export const ROUTES1: RouteInfo[] = [
 
   { path: '/main/dashboard', title: 'Dashbord',  icon:'Dashbord', class: 'Dashbord' },
+<<<<<<< HEAD
   { path: '/main/order', title: 'Request Order',  icon:'person', class: '' },
   // { path: '/main/requestedOrderList', title: 'Requested Orders',  icon:'order', class: '' },
+=======
+  { path: '/main/requestedOrderList', title: 'Requested Orders',  icon:'order', class: '' },
+  { path: '/main/catalogues', title: 'Catalogue Management',  icon:'person', class: '' },
+
+>>>>>>> 1c50faadaa7a84f98f33d261a3eb6141e352d1c5
 ];
 
 export const ROUTES2: RouteInfo[] = [
 
   { path: '/main/dashboard', title: 'Dashbord',  icon:'Dashbord', class: 'Dashbord' },
+<<<<<<< HEAD
   { path: '/main/employees', title: 'Employee Management',  icon:'person', class: '' },
   { path: '/main/ordersProcurement', title: 'Order Requests',  icon:'order', class: '' },
   
+=======
+  { path: '/main/employees', title: 'Employee Management',  icon:'person', class: '' }, 
+   { path: '/main/catalogues', title: 'Catalogue Management',  icon:'person', class: '' },
+
+>>>>>>> 1c50faadaa7a84f98f33d261a3eb6141e352d1c5
 ];
 
 @Component({

@@ -1,0 +1,80 @@
+<h1 style="text-align: center;"> Add an Item</h1>
+
+<!-- Initializing the angular form -->
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+
+  <!-- itemID in the form as a hidden element -->
+  <input type="hidden" name="itemID" #itemID="ngModel" [(ngModel)]="service.formData.itemID">
+
+
+  <!-- first row of the form -->
+  <div class="row">
+
+    <!-- only column of the first row -->
+    <!-- field to get the itemCategory -->
+    <label>Category</label>
+    <select name="itemCategory" #itemCategory="ngModel" [(ngModel)]="service.formData.itemCategory"
+      class="form-control">
+      <option value="Aluminium">Aluminium</option>
+      <option value="Brick (clay)">Brick (clay)</option>
+      <option value="Concrete">Concrete</option>
+      <option value="Fibre cement sheeting">Fibre cement sheeting</option>
+      <option value="Glass">Glass</option>
+      <option value="Mudbrick">Mudbrick</option>
+      <option value="Plasterboard">Plasterboard</option>
+      <option value="Plastics">Plastics</option>
+      <option value="Steel">Steel</option>
+      <option value="Stone and composite stone">Stone and composite stone</option>
+      <option value="Straw bale">Straw bale</option>
+      <option value="Timber">Timberv</option>
+
+    </select>
+  </div>
+
+
+  <!-- second row of the form -->
+  <div class="row" style="margin-top: 10%;">
+
+    <!-- first column of the second row -->
+    <!-- field to get the itemName -->
+    <div class="col-md-6">
+      <label> Item Name</label>
+      <input matInput required name="itemName" #itemName="ngModel" [(ngModel)]="service.formData.itemName"
+        class="form-control">
+    </div>
+
+    <!-- second column of the second row -->
+    <!-- field to get the item price -->
+    <div class="col-md-6">
+      <label>Price</label>
+      <input matInput required name="itemPrice" #itemPrice="ngModel" [(ngModel)]="service.formData.itemPrice"
+        class="form-control">
+    </div>
+
+  </div>
+
+  <!-- third row of the form -->
+  <!-- buttons section -->
+  <div class="row" style="margin-top: 20%;">
+
+    <!-- first column of the third row -->
+    <!-- cancel button-->
+    <div class="col-md-6">
+      <div class="input-group-prepend">
+        <button type="button" class="card-link btn btn-sm btn-outline-info ybtn" style="margin-left: 30px;"
+          [mat-dialog-close]> cancel</button>
+      </div>
+    </div>
+
+    <!-- second column of the third row -->
+    <!-- save button-->
+    <div class="col-md-6">
+      <div class="input-group-prepend">
+        <button type="submit" [disabled]="form.invalid" class="card-link btn btn-sm btn-outline-info ybtn"
+          style="margin-left: 30px;"> save</button>
+      </div>
+    </div>
+
+  </div>
+
+</form>

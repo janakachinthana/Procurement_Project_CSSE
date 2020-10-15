@@ -1,0 +1,104 @@
+<!-- 
+main page for the catalogues section -->
+<div class="main-content">
+    <div class="container-fluid">
+
+        <div class="row">
+        
+            <div class="col-md-12">
+                <div class="card">
+
+                    <!-- header -->
+                    <div class="card-header-info" style="text-align: center;">
+                        <h1 class="card-title " style="color: black; text-transform: uppercase;">Catalogue Management (Procument)
+                        </h1>
+                    </div>
+
+                    <div class="card">
+
+                        <!-- add item button back layout -->
+                        <div class="card-header card-header-info">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-4">
+
+                                            <!-- add new item button -->
+                                            <button class="card-link btn btn-sm  ybtn"
+                                                (click)="addOrEditItem(item)" mat-raised-button>
+                                                <i class="material-icons">add_to_photos</i> Add an item 
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+
+                        <!-- table card body -->
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                
+                                <!-- table view starts here for Catalogue items -->
+                                <table class="table table-hover" style="text-align: center;">
+
+                                    <!-- header -->
+                                    <thead class=" text-primary">
+                                        <th>
+                                            Item Name
+                                        </th>
+                                        <th>
+                                            Category
+                                        </th>
+                                        <th>
+                                            Price
+                                        </th>
+                                        <th>
+                                            Remove
+                                        </th>                             
+                                    </thead>
+
+                                    <!-- body -->
+                                    <tbody>
+
+                                        <!-- getting all items in the list using a loop -->
+                                        <tr *ngFor="let item of list">
+
+                                            <td>
+                                                {{item.itemName}}
+                                            </td>
+                                            
+                                            <td>
+                                                {{item.itemCategory}}
+                                            </td>
+
+                                            <td>
+                                                {{item.itemPrice}}
+                                            </td>
+
+                                            <!-- itemID is not displaying in the table, only using for delete method -->
+                                            <td style="display: none;">
+                                                {{item.itemID}}
+                                            </td>
+
+                                            <!-- column for delete button -->
+                                            <td>
+                                                <a class="btn text-danger" (click)="onDelete(item.itemID)"><i class="fa fa-trash"></i></a>
+                                            </td>
+
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
