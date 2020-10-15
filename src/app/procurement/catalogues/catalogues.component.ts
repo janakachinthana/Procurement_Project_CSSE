@@ -5,7 +5,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Item } from 'app/common-component/shared/models/item.model';
 import { EmployeeService } from 'app/common-component/shared/services/employee.service';
 import { ItemService } from 'app/common-component/shared/services/item.service';
-import { EmployeeRegistrationFormComponent } from '../employee-registration-form/employee-registration-form.component';
 import { CataloguesInsertionFormComponent } from './catalogues-insertion-form/catalogues-insertion-form.component';
 
 @Component({

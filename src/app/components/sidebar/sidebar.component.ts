@@ -4,42 +4,33 @@ import { GenaralService } from 'app/common-component/shared/services/genaral.ser
 
 declare const $: any;
 declare interface RouteInfo {
-    path: string;
-    title: string;
-    icon: string;
-    class: string;
+  path: string;
+  title: string;
+  icon: string;
+  class: string;
 }
 export const ROUTES: RouteInfo[] = [
-  { path: '/main/dashboard', title: 'Dashbord',  icon:'Dashbord', class: 'Dashbord' },
-    { path: '/main/user-profile', title: 'User Profile',  icon:'person', class: '' },
-    
+  { path: '/main/dashboard', title: 'Dashbord', icon: 'Dashbord', class: 'Dashbord' },
+  { path: '/main/user-profile', title: 'User Profile', icon: 'person', class: '' },
+
 ];
 
 export const ROUTES1: RouteInfo[] = [
 
-  { path: '/main/dashboard', title: 'Dashbord',  icon:'Dashbord', class: 'Dashbord' },
-<<<<<<< HEAD
-  { path: '/main/order', title: 'Request Order',  icon:'person', class: '' },
-  // { path: '/main/requestedOrderList', title: 'Requested Orders',  icon:'order', class: '' },
-=======
-  { path: '/main/requestedOrderList', title: 'Requested Orders',  icon:'order', class: '' },
-  { path: '/main/catalogues', title: 'Catalogue Management',  icon:'person', class: '' },
-
->>>>>>> 1c50faadaa7a84f98f33d261a3eb6141e352d1c5
+  { path: '/main/dashboard', title: 'Dashbord', icon: 'Dashbord', class: 'Dashbord' },
+  { path: '/main/order', title: 'Request Order', icon: 'person', class: '' },
+  { path: '/main/user-profile', title: 'User Profile', icon: 'person', class: '' },
 ];
 
 export const ROUTES2: RouteInfo[] = [
 
-  { path: '/main/dashboard', title: 'Dashbord',  icon:'Dashbord', class: 'Dashbord' },
-<<<<<<< HEAD
-  { path: '/main/employees', title: 'Employee Management',  icon:'person', class: '' },
-  { path: '/main/ordersProcurement', title: 'Order Requests',  icon:'order', class: '' },
+  { path: '/main/dashboard', title: 'Dashbord', icon: 'Dashbord', class: 'Dashbord' },
+  { path: '/main/employees', title: 'Employee Management', icon: 'person', class: '' },
+  { path: '/main/catalogues', title: 'Catalogue Management', icon: 'person', class: '' },
+  { path: '/main/ordersProcurement', title: 'Requested Orders', icon: 'person', class: '' }
   
-=======
-  { path: '/main/employees', title: 'Employee Management',  icon:'person', class: '' }, 
-   { path: '/main/catalogues', title: 'Catalogue Management',  icon:'person', class: '' },
+  
 
->>>>>>> 1c50faadaa7a84f98f33d261a3eb6141e352d1c5
 ];
 
 @Component({
@@ -58,10 +49,10 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
 
     if (this.serviceGenaral.type == 0) {
-      
+
       this.menuItems = ROUTES.filter(menuItem => menuItem);
 
-    }else if (this.serviceGenaral.type == 1) {
+    } else if (this.serviceGenaral.type == 1) {
 
       this.menuItems = ROUTES1.filter(menuItem => menuItem);
 
@@ -70,13 +61,13 @@ export class SidebarComponent implements OnInit {
       this.menuItems = ROUTES2.filter(menuItem => menuItem);
 
     }
-    
-    
+
+
   }
   isMobileMenu() {
-      if ($(window).width() > 991) {
-          return false;
-      }
-      return true;
+    if ($(window).width() > 991) {
+      return false;
+    }
+    return true;
   };
 }

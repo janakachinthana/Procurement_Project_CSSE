@@ -22,23 +22,16 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './Account/login/login.component';
 import { environment } from 'environments/environment';
-import { OrderNowService } from './common-component/shared/order-now.service'; 
+import { OrderNowService } from './common-component/shared/services/order-now.service'; 
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { EmployeeRegistrationFormComponent } from './procurement/employees/employee-registration-form/employee-registration-form.component';
 import { EmployeesComponent } from './procurement/employees/employees.component';
 import { SupervisorsComponent } from './supervisors/supervisors.component';
-<<<<<<< HEAD
 import { OrdersComponent } from './procurement/orders/orders.component';
-=======
-import { RequestedOrderListComponent } from './project-managers/requested-order-list/requested-order-list.component';
-import { CataloguesComponent } from './procurement/employees/catalogues/catalogues.component';
 
 import 'zone.js/dist/zone';
-import { CataloguesInsertionFormComponent } from './procurement/employees/catalogues/catalogues-insertion-form/catalogues-insertion-form.component'; 
-
->>>>>>> 1c50faadaa7a84f98f33d261a3eb6141e352d1c5
-
-
+import { CataloguesInsertionFormComponent } from './procurement/catalogues/catalogues-insertion-form/catalogues-insertion-form.component';
+import { CataloguesComponent } from './procurement/catalogues/catalogues.component';
 
 @NgModule({
   imports: [
@@ -67,14 +60,10 @@ import { CataloguesInsertionFormComponent } from './procurement/employees/catalo
     EmployeesComponent,
     EmployeeRegistrationFormComponent,
     SupervisorsComponent,
-<<<<<<< HEAD
     OrdersComponent,
-=======
-    RequestedOrderListComponent,
     CataloguesComponent,
     CataloguesInsertionFormComponent,
    
->>>>>>> 1c50faadaa7a84f98f33d261a3eb6141e352d1c5
 
 
   ],

@@ -6,8 +6,8 @@ import { TypographyComponent } from '../../supervisors/typography/typography.com
 import { AccountComponent } from 'app/account/account.component';
 import { LoginComponent } from '../..//Account/login/login.component';
 import { EmployeesComponent } from '../../procurement/employees/employees.component';
-import { CataloguesComponent } from 'app/procurement/employees/catalogues/catalogues.component';
-import { OrdersComponent } from 'app/procurement/orders/orders.component';
+import { OrdersComponent } from '../../procurement/orders/orders.component';
+import { CataloguesComponent } from '../../procurement/catalogues/catalogues.component';
 
 
 export const AdminLayoutRoutes: Routes = [

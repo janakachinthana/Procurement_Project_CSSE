@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NewOrder } from 'app/common-component/shared/new-order.model';
-import { OrderNowService } from 'app/common-component/shared/order-now.service';
+import { NewOrder } from 'app/common-component/shared/models/new-order.model';
+import { OrderNowService } from 'app/common-component/shared/services/order-now.service';
 import { AngularFirestore } from "@angular/fire/firestore";
 import { MatSnackBar } from '@angular/material/snack-bar';
 
