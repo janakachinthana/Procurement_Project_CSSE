@@ -22,17 +22,12 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './Account/login/login.component';
 import { environment } from 'environments/environment';
-import { OrderNowFormComponent } from './supervisors/typography/order-now-form/order-now-form.component';
-import { OrderNowItemslitsComponent } from './supervisors/typography/order-now-itemslits/order-now-itemslits.component';
 import { OrderNowService } from './common-component/shared/order-now.service'; 
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { EmployeeRegistrationFormComponent } from './procurement/employees/employee-registration-form/employee-registration-form.component';
 import { EmployeesComponent } from './procurement/employees/employees.component';
 import { SupervisorsComponent } from './supervisors/supervisors.component';
-import { RequestedOrderListComponent } from './project-managers/requested-order-list/requested-order-list.component';
-
-
-
+import { OrdersComponent } from './procurement/orders/orders.component';
 
 
 
@@ -63,8 +58,7 @@ import { RequestedOrderListComponent } from './project-managers/requested-order-
     EmployeesComponent,
     EmployeeRegistrationFormComponent,
     SupervisorsComponent,
-    RequestedOrderListComponent,
-   
+    OrdersComponent,
 
 
   ],
