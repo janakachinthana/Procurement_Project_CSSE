@@ -11,25 +11,20 @@ import { Observable } from 'rxjs';
 export class OrderHistoryComponent implements OnInit {
   // list : Observable<any>[];
   list : NewOrder[];
+
   constructor(
     private service : OrderNowService,
   ) { }
 
   ngOnInit(): void {
-    // this.service.getNewOrders().subscribe(actionArray=>{
-    //   this.list = actionArray.map(item => {
-    //     return {   
-    //       id: item.payload.doc.id, ...item.payload.doc.data() as any}
-    //   })
-    // });
 
-
-       this.service.getNewOrder().subscribe(actionArray=>{
+    this.service.getNewOrders().subscribe(actionArray=>{
       this.list = actionArray.map(item => {
         return {   
           id: item.payload.doc.id, ...item.payload.doc.data() as NewOrder}
       })
     });
+  
   }
-
+  
 }

@@ -15,6 +15,6 @@ export class OrderNowService {
   }
 
   getNewOrders(){
-    return this.fireStore.collection('pending-orders').snapshotChanges();
+    return this.fireStore.collection('orders').snapshotChanges();
   }
 }

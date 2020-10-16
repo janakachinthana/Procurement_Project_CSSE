@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { OrderNowService } from 'app/common-component/shared/services/order-now.service';
 import { AngularFirestore } from "@angular/fire/firestore";
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { AngularFireDatabase} from '@angular/fire/database';
 @Component({
   selector: 'app-order-now-form',
   templateUrl: './order-now-form.component.html',
@@ -14,7 +15,8 @@ export class OrderNowFormComponent implements OnInit {
 
   constructor(private service: OrderNowService,
     private fireStore : AngularFirestore,
-    private _snackBar: MatSnackBar) { }
+    private _snackBar: MatSnackBar,
+    private db: AngularFireDatabase) { }
 
   ngOnInit(): void {
     this.resetForm();

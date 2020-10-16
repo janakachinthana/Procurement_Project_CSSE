@@ -29,7 +29,7 @@ export class TypographyComponent implements OnInit {
 // inserting data of requesting order 
   addToPending(){
       this.list.forEach(item => {
-        this.fireStore.collection('orders').doc('Pending-Orders').collection(this.todayDate.toString()).doc(item.id.toString()).set(item);  
+        this.fireStore.collection('orders').doc(item.id.toString()).set(item);  
         this.fireStore.collection('new-orders').doc(item.id.toString()).delete();
       });
   }
