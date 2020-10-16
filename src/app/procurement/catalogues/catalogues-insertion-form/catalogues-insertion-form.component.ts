@@ -1,3 +1,4 @@
+// import statements
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { NgForm } from '@angular/forms';
@@ -7,20 +8,24 @@ import { EmployeeService } from 'app/common-component/shared/services/employee.s
 import { ItemService } from 'app/common-component/shared/services/item.service';
 import { timestamp } from 'rxjs/operators';
 
+// component declareration
 @Component({
   selector: 'app-catalogues-insertion-form',
   templateUrl: './catalogues-insertion-form.component.html',
   styleUrls: ['./catalogues-insertion-form.component.css']
 })
+
+// class declareration
 export class CataloguesInsertionFormComponent implements OnInit {
 
-  todayDate : Date = new Date();
+  // variable declareration ()
+  todayDate: Date = new Date(); // getting currrent time to variable
 
   constructor(
-    private service: ItemService,
-    private fireStore: AngularFirestore,
-    private _snackBar: MatSnackBar,
-    private dialogRef: MatDialog
+    private service: ItemService, // item service class declareration
+    private fireStore: AngularFirestore, // AngularFirestore class declareration
+    private _snackBar: MatSnackBar, // MatSnackBar class declareration
+    private dialogRef: MatDialog // MatDialog class declareration
   ) { }
 
   ngOnInit(): void {
@@ -45,7 +50,7 @@ export class CataloguesInsertionFormComponent implements OnInit {
 
   // submit method of the form
   onSubmit(form: NgForm) {
-    form.value.itemID = this.todayDate.toString(); 
+    form.value.itemID = this.todayDate.toString();
 
     let data = Object.assign({}, form.value);
 
