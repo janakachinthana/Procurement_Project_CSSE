@@ -1,4 +1,7 @@
+// Category model class declareration
 export class Employee {
+
+    // property declraration
     EmployeeID: number;
     FullName: string;
     Designation: string;
@@ -8,5 +11,5 @@ export class Employee {
     Contact: string;
     Email: string;
     Password: string;
-    
+
 }

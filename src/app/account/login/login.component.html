@@ -15,25 +15,27 @@
                         <h2 style="color: aliceblue;">Login</h2>
 
                         <!-- login form -->
-                        <form #form="ngForm"  autocomplete="off">
+                        <form #form="ngForm" autocomplete="off">
 
                             <!-- user input for the login (mobile number) -->
                             <div class="form-group">
                                 <label for="username" style="color: black;">Phone Number</label>
-                                <input type="text" name="Contact" [(ngModel)]="form.value.Contact"/> 
+                                <input type="text" name="Contact" [(ngModel)]="form.value.Contact" />
                             </div>
 
                             <!-- user input for the login (password) -->
                             <div class="form-group">
                                 <label for="password" style="color: black;">Password</label>
-                                <input type="password" id="Password" name="Password"  [(ngModel)]="form.value.Password" />
+                                <input type="password" id="Password" name="Password"
+                                    [(ngModel)]="form.value.Password" />
                             </div>
 
                             <!-- space for login and registration -->
                             <div class="form-group">
                                 <!-- login button  -->
-                                <button [disabled]="loading" type="button" class="btn btn-success" (click)="onSubmit(form)">Login</button>
-                               
+                                <button [disabled]="loading" type="button" class="btn btn-success"
+                                    (click)="onSubmit(form)">Login</button>
+
                                 <!-- Regisstration button  -->
                                 <a [routerLink]="['/register']" class="btn btn-link" style="color: red;">Register</a>
                             </div>

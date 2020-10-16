@@ -1,7 +1,10 @@
+// Category model class declareration
 export class NewOrder {
-    id : String;
+
+    // property declraration
+    id: String;
     categoryName: String;
-    productName : String;
-    quantity : Number;
-    remark : String;  
+    productName: String;
+    quantity: Number;
+    remark: String;
 }

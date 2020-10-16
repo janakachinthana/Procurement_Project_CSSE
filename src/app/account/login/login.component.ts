@@ -17,7 +17,7 @@ import { GenaralService } from 'app/common-component/shared/services/genaral.ser
 // class declareration
 export class LoginComponent implements OnInit {
 
-//  variable of the class declareration
+  //  variable of the class declareration
   list: Employee[];
   submitting = false;
   temp: Employee;
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     private router: Router, //rotuer class declareration
     private service: EmployeeService, //Employee service class declareration
     private serviceGenaral: GenaralService //general service class class declareration
-  ) {}
+  ) { }
 
   // implementation of class intialization method
   ngOnInit(): void {
@@ -64,7 +64,7 @@ export class LoginComponent implements OnInit {
           this.router.navigateByUrl('main/dashboard');
           this.serviceGenaral.type = 1;
         }
-        
+
         // check user type condionfor Procurement
         else if (this.temp.Designation == "Procurement") {
           this.router.navigateByUrl('main/dashboard');
