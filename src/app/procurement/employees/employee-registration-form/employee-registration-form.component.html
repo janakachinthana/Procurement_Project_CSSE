@@ -1,78 +1,103 @@
-
-  
-  <br>
-  
+<!-- employee registration form -->
   <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+
+    <!--space employee Id -->
     <input type="hidden" name="EmployeeID" #EmployeeID="ngModel" [(ngModel)]="service.formData.EmployeeID">
    
-       
-   
+    <!-- space for full name -->
     <div class="row">
       <div class="col-md-6">
         <label> Full Name</label>
+
+        <!-- user input for full name -->
           <input matInput required  name="FullName"  #FullName="ngModel" [(ngModel)]="service.formData.FullName" class="form-control" >
       </div >
+
+      <!-- space for Designation-->
       <div class="col-md-6">
         <label> Designation </label>
+
+          <!-- user input for Designation -->
           <input matInput required   name="Designation"  #Designation="ngModel" [(ngModel)]="service.formData.Designation" class="form-control" >
       </div>
     </div>
 
     <div class="row">
+
+       <!-- space for Project-->
     <div class="col-md-6">
         <label>Project</label>
+
+        <!-- user input for Project -->
         <input matInput required name="projectName"  #ProjectName="ngModel" [(ngModel)]="service.formData.ProjectName" class="form-control" >
     </div>
     <div class="col-md-6">
+
+      <!-- space for Site Address-->
         <label>Site Address </label>
+
+        <!-- user input for Site Address -->
         <input matInput required type="text"  name="SiteAddress"  #SiteAddress="ngModel" [(ngModel)]="service.formData.SiteAddress" class="form-control">
     </div>
     </div>
       <div class="row">
+
+        <!-- space for NIC NO-->
         <div class="col-md-6">
             <label>NIC NO </label>
+
+            <!-- user input for NIC NO -->
             <input matInput required name="Nic" #Nic="ngModel" [(ngModel)]="service.formData.Nic" class="form-control">
         </div> 
 
+        <!-- space for Contact NO-->
         <div class="col-md-6">
             <label>Contact NO </label>
+
+             <!-- user input for Contact NO -->
             <input matInput required pattern="^[0-9]{9}" type="number" name="Contact"  #Contact="ngModel" [(ngModel)]="service.formData.Contact" class="form-control">
         </div>
     </div>
     <div class="row">
+
+      <!-- space for Email-->
       <div class="col-md-6">
-        <label>Email NO </label>
+        <label>Email </label>
+
+        <!-- user input for Email -->
           <input matInput required pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.com+$"  name="Email" type="email"  #Email="ngModel" [(ngModel)]="service.formData.Email" class="form-control">
       </div>
+
+      <!-- space for Password-->
       <div class="col-md-6">
         <label>Password </label>
+
+        <!-- user input for Password -->
           <input matInput required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  name="Password" type="password" #Password="ngModel" [(ngModel)]="service.formData.Password" class="form-control">
       </div>
     </div>
   
+     <!-- space for submit and change buttons-->
     <div class="row">
       <div class="col-md-6">
         <div class="input-group-prepend">
-            <button type="submit" [disabled]="form.invalid" class="card-link btn btn-sm btn-outline-info ybtn" style="margin-left: 30px;" [mat-dialog-close]> send</button>
+            <button type="submit" [disabled]="form.invalid" class="card-link btn btn-sm btn-outline-info ybtn" style="margin-left: 30px;" [mat-dialog-close]>Submit</button>
       </div>  
       </div>
       <div class="col-md-6">
         <div class="input-group-prepend">
          
-          <button type="button"  [disabled]="form.invalid" class="card-link btn btn-sm btn-outline-info ybtn" style="margin-left: 30px;"> save</button>
+          <button type="button"  [disabled]="form.invalid" class="card-link btn btn-sm btn-outline-info ybtn" style="margin-left: 30px;">Change</button>
         </div>
       </div>
     </div>
     <hr>
-      
+      <!-- space for close buttons-->
       <div class="col-md-12">
         <div class="input-group-prepend">
           <button type="button" class="card-link btn btn-sm btn-outline-danger ybtn" [mat-dialog-close]>CLOSE</button>
-         
         </div>
       </div>
-      
-  
   </form>
   
   
