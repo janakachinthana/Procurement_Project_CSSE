@@ -4,11 +4,11 @@ import { NewOrder } from 'app/common-component/shared/models/new-order.model';
 import { OrderNowService } from 'app/common-component/shared/services/order-now.service';
 
 @Component({
-  selector: 'app-orders',
-  templateUrl: './orders.component.html',
-  styleUrls: ['./orders.component.css']
+  selector: 'app-requested-orders',
+  templateUrl: './requested-orders.component.html',
+  styleUrls: ['./requested-orders.component.css']
 })
-export class OrdersComponent implements OnInit {
+export class RequestedOrdersComponent implements OnInit {
 
   list : NewOrder[];
 
@@ -30,8 +30,8 @@ export class OrdersComponent implements OnInit {
 
   addToApprovedList(){
     this.list.forEach(item => {
-      this.fireStore.collection('approved').doc(item.id.toString()).set(item);  
-      // this.fireStore.collection('new-orders').doc(item.id.toString()).delete();
+      this.fireStore.collection('Approved Orders').doc(item.id.toString()).set(item);  
+      this.fireStore.collection('Requested Orders').doc(item.id.toString()).delete();
     });
 }
   

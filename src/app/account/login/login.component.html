@@ -1,37 +1,47 @@
-<!-- <Button (click)="login()">click me</Button> -->
-<img src="./assets/img/loginBgImage1.jpg" id="myVideo" style="opacity: .5;">
+<!-- background Image -->
+<img src="./assets/img/loginBgImage1.jpg" id="bagroundImage" style="opacity: .5;">
 <div class="row">
     <div class="col-md-12">
         <div class="row">
+
+            <!--Screen row divided into several columns -->
             <div class="col-md-4"></div>
-            <div class="col-md-4" style="margin-top: 180px; opacity: .8; border-radius: 35px; text-align: center;">
+            <div class="col-md-4" id="divCol1">
                 <div class="row">
                     <div class="col-md-2"></div>
-                    <div class="col-md-8 bg-info" style="border-radius: 35px;">
+                    <div class="col-md-8 bg-info" id="divCol2">
+
+                        <!-- login heddin -->
                         <h2 style="color: aliceblue;">Login</h2>
 
+                        <!-- login form -->
                         <form #form="ngForm"  autocomplete="off">
+
+                            <!-- user input for the login (mobile number) -->
                             <div class="form-group">
                                 <label for="username" style="color: black;">Phone Number</label>
-                                <input type="text" name="Contact" [(ngModel)]="form.value.Contact"  />
-                               
+                                <input type="text" name="Contact" [(ngModel)]="form.value.Contact"/> 
                             </div>
+
+                            <!-- user input for the login (password) -->
                             <div class="form-group">
                                 <label for="password" style="color: black;">Password</label>
                                 <input type="password" id="Password" name="Password"  [(ngModel)]="form.value.Password" />
-                            
                             </div>
+
+                            <!-- space for login and registration -->
                             <div class="form-group">
+                                <!-- login button  -->
                                 <button [disabled]="loading" type="button" class="btn btn-success" (click)="onSubmit(form)">Login</button>
-                                <img *ngIf="loading"
-                                    src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                               
+                                <!-- Regisstration button  -->
                                 <a [routerLink]="['/register']" class="btn btn-link" style="color: red;">Register</a>
                             </div>
+
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4"></div>
         </div>
     </div>
 </div>

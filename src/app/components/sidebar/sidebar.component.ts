@@ -21,7 +21,7 @@ export const ROUTES1: RouteInfo[] = [
   { path: '/main/dashboard', title: 'Dashbord', icon: 'Dashbord', class: 'Dashbord' },
   { path: '/main/order', title: 'Request Order', icon: 'person', class: '' },
   { path: '/main/user-profile', title: 'User Profile', icon: 'person', class: '' },
-  { path: '/main/ordersProjectManager', title: 'Order History', icon: 'person', class: '' }
+  { path: '/main/ordersProjectManager', title: 'Requested Order', icon: 'person', class: '' }
 ];
 
 export const ROUTES2: RouteInfo[] = [
@@ -29,10 +29,8 @@ export const ROUTES2: RouteInfo[] = [
   { path: '/main/dashboard', title: 'Dashbord', icon: 'Dashbord', class: 'Dashbord' },
   { path: '/main/employees', title: 'Employee Management', icon: 'person', class: '' },
   { path: '/main/catalogues', title: 'Catalogue Management', icon: 'person', class: '' },
-  { path: '/main/ordersProcurement', title: 'Requested Orders', icon: 'person', class: '' }
-  
-  
-
+  { path: '/main/requestedOrdersProcurement', title: 'Order Requests', icon: 'person', class: '' },
+  { path: '/main/approvedOrdersProcurement', title: 'Approved Orders', icon: 'person', class: '' }
 ];
 
 @Component({

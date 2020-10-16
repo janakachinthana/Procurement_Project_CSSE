@@ -19,7 +19,6 @@ import {
   AgmCoreModule
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './Account/login/login.component';
 import { environment } from 'environments/environment';
 import { OrderNowService } from './common-component/shared/services/order-now.service'; 
@@ -27,12 +26,13 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { EmployeeRegistrationFormComponent } from './procurement/employees/employee-registration-form/employee-registration-form.component';
 import { EmployeesComponent } from './procurement/employees/employees.component';
 import { SupervisorsComponent } from './supervisors/supervisors.component';
-import { OrdersComponent } from './procurement/orders/orders.component';
 
 import 'zone.js/dist/zone';
 import { CataloguesInsertionFormComponent } from './procurement/catalogues/catalogues-insertion-form/catalogues-insertion-form.component';
 import { CataloguesComponent } from './procurement/catalogues/catalogues.component';
 import { OrderHistoryComponent } from './project-managers/Orders/order-history/order-history.component';
+import { ApprovedOrdersComponent } from './procurement/orders/approved-orders/approved-orders.component';
+import { RequestedOrdersComponent } from './procurement/orders/requested-orders/requested-orders.component';
 
 @NgModule({
   imports: [
@@ -56,15 +56,15 @@ import { OrderHistoryComponent } from './project-managers/Orders/order-history/o
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    AccountComponent,
     LoginComponent,
     EmployeesComponent,
     EmployeeRegistrationFormComponent,
     SupervisorsComponent,
-    OrdersComponent,
     CataloguesComponent,
     CataloguesInsertionFormComponent,
     OrderHistoryComponent,
+    ApprovedOrdersComponent,
+    RequestedOrdersComponent,
    
 
 

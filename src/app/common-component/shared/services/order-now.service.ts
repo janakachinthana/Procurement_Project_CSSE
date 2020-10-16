@@ -15,6 +15,10 @@ export class OrderNowService {
   }
 
   getNewOrders(){
-    return this.fireStore.collection('orders').snapshotChanges();
+    return this.fireStore.collection('Requested Orders').snapshotChanges();
+  }
+
+  getApprovedOrders(){
+    return this.fireStore.collection('Approved Orders').snapshotChanges();
   }
 }
