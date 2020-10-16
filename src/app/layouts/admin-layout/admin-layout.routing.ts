@@ -1,5 +1,5 @@
+// import statement
 import { Routes } from '@angular/router';
-
 import { DashboardComponent } from '../../supervisors/dashboard/dashboard.component';
 import { UserProfileComponent } from '../../common-component/user-profile/user-profile.component';
 import { TypographyComponent } from '../../supervisors/typography/typography.component';
@@ -10,7 +10,7 @@ import { OrderHistoryComponent } from '../../project-managers/Orders/order-histo
 import { RequestedOrdersComponent } from '../../procurement/orders/requested-orders/requested-orders.component';
 import { ApprovedOrdersComponent } from 'app/procurement/orders/approved-orders/approved-orders.component';
 
-
+// compoents set to path for access the compoents
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
     { path: 'user-profile', component: UserProfileComponent },

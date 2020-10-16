@@ -18,7 +18,7 @@ import { AppComponent } from './app.component';
 import {
   AgmCoreModule
 } from '@agm/core';
-import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+
 import { LoginComponent } from './Account/login/login.component';
 import { environment } from 'environments/environment';
 import { OrderNowService } from './common-component/shared/services/order-now.service'; 
@@ -33,6 +33,7 @@ import { CataloguesComponent } from './procurement/catalogues/catalogues.compone
 import { OrderHistoryComponent } from './project-managers/Orders/order-history/order-history.component';
 import { ApprovedOrdersComponent } from './procurement/orders/approved-orders/approved-orders.component';
 import { RequestedOrdersComponent } from './procurement/orders/requested-orders/requested-orders.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 
 @NgModule({
   imports: [

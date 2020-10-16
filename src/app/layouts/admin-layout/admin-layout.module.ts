@@ -1,3 +1,4 @@
+// import statements
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -15,13 +16,11 @@ import { UserProfileComponent } from '../../common-component/user-profile/user-p
 import { OrderNowFormComponent } from '../../supervisors/typography/order-now-form/order-now-form.component';
 import { OrderNowItemslitsComponent } from '../../supervisors/typography/order-now-itemslits/order-now-itemslits.component';
 
-
+// ngModule imports
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
-    // RouterModule.forChild(account),
-    // ToastrModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
@@ -31,6 +30,8 @@ import { OrderNowItemslitsComponent } from '../../supervisors/typography/order-n
     MatSelectModule,
     MatTooltipModule,
   ],
+
+  // component declareration
   declarations: [
     DashboardComponent,
     UserProfileComponent,
@@ -41,4 +42,5 @@ import { OrderNowItemslitsComponent } from '../../supervisors/typography/order-n
   ]
 })
 
+// class declareration
 export class AdminLayoutModule {}
