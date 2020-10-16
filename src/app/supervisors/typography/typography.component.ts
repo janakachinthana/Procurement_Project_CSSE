@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from "@angular/fire/firestore";
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { NewOrder } from 'app/common-component/shared/models/new-order.model';
 import { OrderNowService } from 'app/common-component/shared/services/order-now.service';
 import { data } from 'jquery';
@@ -12,10 +13,12 @@ import { data } from 'jquery';
 export class TypographyComponent implements OnInit {
   todayDate : Date = new Date();
   list : NewOrder[];
+  dateX : String;
 
 
   constructor(private service : OrderNowService,
-    private fireStore: AngularFirestore) { }
+    private fireStore: AngularFirestore,
+    private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.service.getNewOrder().subscribe(actionArray=>{
@@ -28,9 +31,23 @@ export class TypographyComponent implements OnInit {
 
 // inserting data of requesting order 
   addToPending(){
-      this.list.forEach(item => {
-        this.fireStore.collection('Requested Orders').doc(item.id.toString()).set(item);  
-        this.fireStore.collection('new-orders').doc(item.id.toString()).delete();
-      });
+      var date =((document.getElementById('deliveryDate') as HTMLInputElement).value);
+      this.dateX = date.toString();
+      if(this.dateX.length){
+        this.list.forEach(item => {
+          this.fireStore.collection('Requested Orders').doc(item.id.toString()).set(item);  
+          this.fireStore.collection('new-orders').doc(item.id.toString()).delete();
+        });
+      }else{
+        this.openSnackBar();
+      }
+      
+    
+  }
+
+  openSnackBar() {
+    this._snackBar.open('No date added', 'Done!', {
+      duration: 2000,
+    });
   }
 }

@@ -32,7 +32,7 @@ export class OrderNowItemslitsComponent implements OnInit {
 
   onDelete(id:String){
     if(confirm("Are you sure to delete this record?")){
-        this.fireStore.doc('new-order/'+id).delete();
+        this.fireStore.doc('new-orders/' +id).delete();
         this.openSnackBar();
     }
   }

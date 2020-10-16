@@ -1,16 +1,28 @@
+<!-- order request form -->
+
 <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
     <input type="hidden" name="id"  #id="ngModel" [(ngModel)]="service.formData.id" >
+    
     <div class="row">
         <div class="col-md-12">
             <h4>Choose a category</h4>
             <select name="categoryName" #categoryName="ngModel" [(ngModel)]="service.formData.categoryName" class="form-control" required>
-                <option value="Category1" >Category 1</option>
-                <option value="Category2">Category 2</option>
-                <option value="Category3">Category 3</option>
-                <option value="Category4">Category 4</option>
+                <option value="Aluminium">Aluminium</option>
+                <option value="Brick (clay)">Brick (clay)</option>
+                <option value="Concrete">Concrete</option>
+                <option value="Fibre cement sheeting">Fibre cement sheeting</option>
+                <option value="Glass">Glass</option>
+                <option value="Mudbrick">Mudbrick</option>
+                <option value="Plasterboard">Plasterboard</option>
+                <option value="Plastics">Plastics</option>
+                <option value="Steel">Steel</option>
+                <option value="Stone and composite stone">Stone and composite stone</option>
+                <option value="Straw bale">Straw bale</option>
+                <option value="Timber">Timberv</option>
             </select>
         </div>
     </div>
+
     <div class="row">
         <div class="col-md-12">
             <h4>Choose an Item</h4>
@@ -19,6 +31,10 @@
                 <option value="item2">Item 2</option>
                 <option value="item3">Item 3</option>
                 <option value="item4">Item 4</option>
+                <option value="item5">Item 5</option>
+                <option value="item6">Item 6</option>
+                <option value="item7">Item 7</option>
+                <option value="item8">Item 8</option>
             </select>
         </div>
     </div>
