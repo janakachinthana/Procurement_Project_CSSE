@@ -1,11 +1,70 @@
 <div class="main-content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12" style="margin-bottom: 2cm;">
                 <div class="card">
                     <div class="card-header card-header-danger">
-                        <h4 class="card-title" id="textAlline">Port City Project</h4>
-                        <p class="card-category" id="textAlline">List of Items </p>
+                        <h4>Project : Port City Project </h4>
+                        <h4>Target date to be Dellivered : 2020/11/05</h4>
+                        <h4>Project Manager : A.D.S de Zoysa</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+
+                            <table class="table table-hover">
+                                <thead>
+                                    <th>Product Name</th>
+                                    <th>Category</th>
+                                    <th>Qty</th>
+                                    <th>Renark</th>
+                                </thead>
+                                <tbody>
+                                    <tr  *ngFor="let lists of list" >
+                                        <td >{{lists.productName}}</td>
+                                        <td >{{lists.categoryName}}</td>
+                                        <td >{{lists.quantity}}</td>
+                                        <td >{{lists.remark}}</td>
+                                       </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4>Project : Kandy City Centre </h4>
+                        <h4>Target date to be Dellivered : 2020/10/15</h4>
+                        <h4>Project Manager : M.P. Dewalegama</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+
+                            <table class="table table-hover">
+                                <thead>
+                                    <th>Product Name</th>
+                                    <th>Category</th>
+                                    <th>Qty</th>
+                                    <th>Renark</th>
+                                </thead>
+                                <tbody>
+                                    <tr  *ngFor="let lists of list" >
+                                        <td >{{lists.productName}}</td>
+                                        <td >{{lists.categoryName}}</td>
+                                        <td >{{lists.quantity}}</td>
+                                        <td >{{lists.remark}}</td>
+                                       </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4>Project : IFS Head Office</h4>
+                        <h4>Target date to be Dellivered : 2020/10/10</h4>
+                        <h4>Project Manager : R.A.D.B.S. Perera</h4>
                     </div>
                     <div class="card-body">
                         <div class="row">

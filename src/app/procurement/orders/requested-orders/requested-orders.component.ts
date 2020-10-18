@@ -11,6 +11,7 @@ import { OrderNowService } from 'app/common-component/shared/services/order-now.
 export class RequestedOrdersComponent implements OnInit {
 
   list : NewOrder[];
+  isShown: boolean = true ;
 
   constructor(
     private service : OrderNowService,
@@ -26,6 +27,7 @@ export class RequestedOrdersComponent implements OnInit {
       })
     });
   
+
   }
 
   addToApprovedList(){
@@ -33,6 +35,8 @@ export class RequestedOrdersComponent implements OnInit {
       this.fireStore.collection('Approved Orders').doc(item.id.toString()).set(item);  
       this.fireStore.collection('Requested Orders').doc(item.id.toString()).delete();
     });
+    this.isShown =false;
+    
 }
   
   

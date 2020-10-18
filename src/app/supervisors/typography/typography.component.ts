@@ -14,6 +14,7 @@ export class TypographyComponent implements OnInit {
   todayDate : Date = new Date();
   list : NewOrder[];
   dateX : String;
+  
 
 
   constructor(private service : OrderNowService,
