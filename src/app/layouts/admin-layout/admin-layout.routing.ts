@@ -9,6 +9,7 @@ import { CataloguesComponent } from '../../procurement/catalogues/catalogues.com
 import { OrderHistoryComponent } from '../../project-managers/Orders/order-history/order-history.component';
 import { RequestedOrdersComponent } from '../../procurement/orders/requested-orders/requested-orders.component';
 import { ApprovedOrdersComponent } from 'app/procurement/orders/approved-orders/approved-orders.component';
+import { SpecialRequestedOrdersComponent } from 'app/procurement/orders/special-requested-orders/special-requested-orders.component';
 
 // compoents set to path for access the compoents
 export const AdminLayoutRoutes: Routes = [
@@ -21,10 +22,8 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'catalogues',        component: CataloguesComponent },
     { path: 'ordersProjectManager',        component: OrderHistoryComponent },
     { path: 'login', component: LoginComponent },
+    { path: 'specialRequestedOrdersProcurement', component: SpecialRequestedOrdersComponent },
+
     
 ];
 
-// export const account: Routes = [
-//     { path: 'login', component: LoginComponent },
-
-// ];

@@ -34,7 +34,9 @@ export const ROUTES2: RouteInfo[] = [
   { path: '/main/employees', title: 'Employee Management', icon: 'person', class: '' },
   { path: '/main/catalogues', title: 'Catalogue Management', icon: 'person', class: '' },
   { path: '/main/requestedOrdersProcurement', title: 'Order Requests', icon: 'person', class: '' },
-  { path: '/main/approvedOrdersProcurement', title: 'Approved Orders', icon: 'person', class: '' }
+  { path: '/main/approvedOrdersProcurement', title: 'Approved Orders', icon: 'person', class: '' },
+  { path: '/main/specialRequestedOrdersProcurement', title: 'Speical Requested Orders', icon: 'person', class: '' }
+
 ];
 
 // component declreration

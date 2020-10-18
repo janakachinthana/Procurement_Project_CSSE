@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from "@angular/fire/firestore";
+import { NgForm, NgModel } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { NewOrder } from 'app/common-component/shared/models/new-order.model';
 import { OrderNowService } from 'app/common-component/shared/services/order-now.service';
-import { data } from 'jquery';
 
 @Component({
   selector: 'app-typography',

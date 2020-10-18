@@ -18,13 +18,13 @@ import { EmployeeRegistrationFormComponent } from './employee-registration-form/
 export class EmployeesComponent implements OnInit {
 
   // variable declareration
-  list : Employee[];
-  
+  list: Employee[];
+
   // implementation of constructor
   constructor(
-    private dialog:MatDialog, // MatDialog class declareration
-    private service : EmployeeService, // EmployeeService class declareration
-    private fireStore : AngularFirestore, // AngularFirestore class declareration
+    private dialog: MatDialog, // MatDialog class declareration
+    private service: EmployeeService, // EmployeeService class declareration
+    private fireStore: AngularFirestore, // AngularFirestore class declareration
     private _snackBar: MatSnackBar // MatSnackBar class declareration
   ) { }
 
@@ -35,11 +35,12 @@ export class EmployeesComponent implements OnInit {
     this.service.getEmployees().subscribe(actionArray => {
       this.list = actionArray.map(e => {
         return {
-          id: e.payload.doc.id, ...e.payload.doc.data() as Employee};
+          id: e.payload.doc.id, ...e.payload.doc.data() as Employee
+        };
       })
     });
   }
-  
+
   // implementation of add or edit button with popup window
   AddOrEditEmployees(emp: Employee) {
     const dialogConfig = new MatDialogConfig();
@@ -47,7 +48,7 @@ export class EmployeesComponent implements OnInit {
     dialogConfig.disableClose = false;
     dialogConfig.width = '35%';
     dialogConfig.height = '80%';
-    dialogConfig.data = {emp};
+    dialogConfig.data = { emp };
     this.dialog.open(EmployeeRegistrationFormComponent);
   }
 }

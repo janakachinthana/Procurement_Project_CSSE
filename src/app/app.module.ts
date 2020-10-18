@@ -34,6 +34,7 @@ import { OrderHistoryComponent } from './project-managers/Orders/order-history/o
 import { ApprovedOrdersComponent } from './procurement/orders/approved-orders/approved-orders.component';
 import { RequestedOrdersComponent } from './procurement/orders/requested-orders/requested-orders.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { SpecialRequestedOrdersComponent } from './procurement/orders/special-requested-orders/special-requested-orders.component';
 
 @NgModule({
   imports: [
@@ -66,6 +67,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     OrderHistoryComponent,
     ApprovedOrdersComponent,
     RequestedOrdersComponent,
+    SpecialRequestedOrdersComponent,
    
 
 

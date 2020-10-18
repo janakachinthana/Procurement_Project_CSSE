@@ -37,7 +37,7 @@ import { OrderNowItemslitsComponent } from '../../supervisors/typography/order-n
     UserProfileComponent,
     TypographyComponent,
     OrderNowFormComponent,
-    OrderNowItemslitsComponent
+    OrderNowItemslitsComponent,
   
   ]
 })
